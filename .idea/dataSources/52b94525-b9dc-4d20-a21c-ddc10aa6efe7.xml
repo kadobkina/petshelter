@@ -794,8 +794,10 @@ false posixrules
     <database id="3" parent="1" name="petshelter_development">
       <ObjectId>20801</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>47309</IntrospectionStateNumber>
+      <IntrospectionStateNumber>90032</IntrospectionStateNumber>
       <Current>1</Current>
+      <Relations>sequence|table|20945|20947|1
+</Relations>
     </database>
     <database id="4" parent="1" name="petshelter_test">
       <ObjectId>20802</ObjectId>
@@ -948,7 +950,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>352</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>47310</IntrospectionStateNumber>
+      <IntrospectionStateNumber>90033</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="47" parent="3" name="btree">
@@ -1011,5 +1013,147 @@ false posixrules
     <language id="55" parent="3" name="internal"/>
     <language id="56" parent="3" name="plpgsql"/>
     <language id="57" parent="3" name="sql"/>
+    <sequence id="58" parent="46" name="pets_id_seq">
+      <ObjectId>20945</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>90029</StateNumber>
+      <DataType>bigint|0s</DataType>
+    </sequence>
+    <table id="59" parent="46" name="ar_internal_metadata">
+      <ObjectId>20886</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>80137</StateNumber>
+    </table>
+    <table id="60" parent="46" name="pets">
+      <ObjectId>20947</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>90029</StateNumber>
+    </table>
+    <table id="61" parent="46" name="schema_migrations">
+      <ObjectId>20878</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>80136</StateNumber>
+    </table>
+    <column id="62" parent="59" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>80137</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="63" parent="59" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>80137</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="64" parent="59" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp(6)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>80137</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="65" parent="59" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp(6)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>80137</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="66" parent="59" name="ar_internal_metadata_pkey">
+      <ObjectId>20892</ObjectId>
+      <StateNumber>80137</StateNumber>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="67" parent="59" name="ar_internal_metadata_pkey">
+      <ObjectId>20893</ObjectId>
+      <StateNumber>80137</StateNumber>
+      <ColNames>key</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="60" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>90029</StateNumber>
+      <DefaultExpression>nextval(&apos;pets_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="69" parent="60" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>90029</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="70" parent="60" name="kind">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>90029</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="60" name="age">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>90029</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="72" parent="60" name="sex">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>90029</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="60" name="shelter_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>90029</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="74" parent="60" name="description">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>90029</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="75" parent="60" name="pets_pkey">
+      <ObjectId>20954</ObjectId>
+      <StateNumber>90029</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="76" parent="60" name="pets_pkey">
+      <ObjectId>20955</ObjectId>
+      <StateNumber>90029</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pets_pkey</UnderlyingIndexName>
+    </key>
+    <column id="77" parent="61" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>80136</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="78" parent="61" name="schema_migrations_pkey">
+      <ObjectId>20884</ObjectId>
+      <StateNumber>80136</StateNumber>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="79" parent="61" name="schema_migrations_pkey">
+      <ObjectId>20885</ObjectId>
+      <StateNumber>80136</StateNumber>
+      <ColNames>version</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

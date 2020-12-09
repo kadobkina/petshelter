@@ -1,0 +1,12 @@
+<ul>
+  <% @pets.each do |p| %>
+    <li>
+      <div class="pet-name"> <%= p.name %> </div>
+      <p>
+        <%= p.description %>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Отдать питомца', new_pet_path %>
