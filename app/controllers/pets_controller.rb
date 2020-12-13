@@ -1,5 +1,8 @@
 class PetsController < ApplicationController
 
+  def index
+    @pets = Pet.all
+  end
 
   def new
 
@@ -14,14 +17,15 @@ class PetsController < ApplicationController
     end
   end
 
+  def show
+    @pet = Pet.find_by_id(params[:id])
+    not_found unless @pet.present?
+  end
+
   private
   def pet_params
     params.require(:pet).permit(:name, :kind, :age, :sex, :description)
   end
 
-  def show
-    @pet = Pet.find_by_id(params[:id])
-    not_found unless @pet.present?
-  end
 
 end

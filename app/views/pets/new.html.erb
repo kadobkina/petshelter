@@ -1,10 +1,24 @@
 Страница для создания нового питомца
-<%= form_for :pet, url: {action: "create"} do |f| %>
-  Имя: <%= f.text_field :name, required: true%>
-  Вид: <%= f.text_field :kind%>
-  Возраст: <%= f.text_field :age%>
-  Пол: <%= f.text_field :sex%>
-  Немного о питомце: <%= f.text_area :description%>
-  <%= f.submit %>
+<div class="custom-form">
+  <%= form_for :pet, url: {action: "create"} do |f| %>
+    <div class="custom-form-row">
+      Имя: <%= f.text_field :name, required: true %>
+    </div>
+    <div class="custom-form-row">
+      Вид: <%= f.text_field :kind %>
+    </div>
+    <div class="custom-form-row">
+      Возраст: <%= f.text_field :age, required: true  %>
+    </div>
+    <div class="custom-form-row">
+      Пол: <%= f.text_field :sex %>
+    </div>
+    <div class="custom-form-row">
+      Немного о питомце: <%= f.text_area :description %>
+    </div>
+    <div class="custom-form-row">
+      <%= f.submit %>
+    </div>
 
-<% end %>
+  <% end %>
+</div>

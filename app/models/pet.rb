@@ -1,3 +1,4 @@
 class Pet < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :age, presence: true
+  belongs_to :shelter
 end

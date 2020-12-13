@@ -5,5 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Pet.create!(name: 'Тимоша', kind: 'Кошка', age: 5, sex: 'М', shelter_id: 1, description: 'Мой сладкий пирожочек')
-Pet.create!(name: 'Суджучок', kind: 'Грызун', age: 1, sex: 'М', shelter_id: 1, description: 'Мой сладенький джунгарик-мечта')
+
+sh1 = Shelter.create!(name: 'Приют №1', address: 'г. Ростов-на-Дону, ул. Мира, 8')
+sh2 = Shelter.create!(name: 'Приют №2', address: 'г. Ростов-на-Дону, ул. Космонавтов, 22')
+
+Pet.create!(name: 'Тимоша', kind: 'Кошка', age: 5, sex: 'М', description: 'Мой сладкий пирожочек', shelter: sh1)
+Pet.create!(name: 'Суджучок', kind: 'Грызун', age: 1, sex: 'М', description: 'Мой сладенький джунгарик-мечта', shelter: sh2)
+

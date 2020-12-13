@@ -5,12 +5,19 @@ class CreatePets < ActiveRecord::Migration[6.0]
       p.string :kind
       p.integer :age
       p.string :sex
-      p.integer :shelter_id
       p.text :description
+      p.references :shelter
+      p.string :photo_url
+    end
+
+    create_table :shelters do |s|
+      s.string :name, null: false
+      s.string :address, null: false
     end
   end
 
   def down
     drop_table :pets
+    drop_table :shelters
   end
 end

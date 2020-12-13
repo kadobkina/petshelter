@@ -1,7 +1,7 @@
 <ul>
   <% @pets.each do |p| %>
     <li>
-      <div class="pet-name"> <%= p.name %> </div>
+      <%= link_to p.name, pet_path(p) %>
       <p>
         <%= p.description %>
       </p>
