@@ -3,6 +3,13 @@
     <li>
       <%= link_to p.name, pet_path(p) %>
       <p>
+        <%= p.kind %>
+      </p>
+      <p>
+        <%= 'Возраст: '%>
+        <%= p.age %>
+      </p>
+      <p>
         <%= p.description %>
       </p>
     </li>
