@@ -1,8 +1,6 @@
 class PetsController < ApplicationController
 
-  def index
-    @pets = Pet.all
-  end
+  before_action :authenticate_user!
 
   def new
 

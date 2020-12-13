@@ -1,3 +1,5 @@
 class Operation < ApplicationRecord
-  belongs_to :shelter, :pet
+  #validates :pet, :shelter, :state, presence: true
+  belongs_to :pet
+  belongs_to :shelter
 end

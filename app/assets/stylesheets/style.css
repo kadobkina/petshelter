@@ -12,3 +12,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+.custom-form-sign {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.custom-form-sign .custom-form-sign-row {
+    display: flex;
+    justify-content: space-between;
+}
