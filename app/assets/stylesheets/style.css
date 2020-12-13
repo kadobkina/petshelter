@@ -1,5 +1,18 @@
-.pet-name {
-    color: black;
+.description-pet {
+    font-size: 20px;
+    min-width: 200px;
+    border: #2E2F30 solid 1px;
+    padding: 5px;
+}
+
+.description-pet .description-pet-row {
+    font-size: 15px;
+}
+
+.pet-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .custom-form {

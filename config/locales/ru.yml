@@ -31,6 +31,7 @@ ru:
         sex: "Пол"
         description: "Описание"
         shelter_id: "Приют"
+        photo_url: "Фото"
   active_admin:
     dashboard: "Панель управления"
     dashboard_welcome:

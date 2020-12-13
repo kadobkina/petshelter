@@ -1,19 +1,22 @@
-<ul>
+<div class="pet-container">
   <% @pets.each do |p| %>
-    <li>
-      <%= link_to p.name, pet_path(p) %>
+    <div class="description-pet">
       <p>
-        <%= p.kind %>
+      <%= "<Тут будет фото>" %>
       </p>
-      <p>
+      <%= link_to p.name, pet_path(p) %>
+      <div class ="description-pet-row">
+        <p>
+        <%= p.kind %>
+        </p>
+        <p>
         <%= 'Возраст: '%>
         <%= p.age %>
-      </p>
-      <p>
-        <%= p.description %>
-      </p>
-    </li>
+        </p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <%= link_to 'Отдать питомца', new_pet_path %>
+

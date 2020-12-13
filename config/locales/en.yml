@@ -55,6 +55,14 @@ en:
         namespace: "Namespace"
         resource_type: "Resource type"
         updated_at: "Updated"
+      pet:
+        name: "Name"
+        kind: "Kind"
+        age: "Age"
+        sex: "Sex"
+        description: "Description"
+        shelter_id: "Shelter"
+        photo_url: "Photo"
   active_admin:
     dashboard: "Dashboard"
     dashboard_welcome:

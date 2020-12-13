@@ -11,6 +11,7 @@ class PetsController < ApplicationController
     if pet.save
       redirect_to pet_path(pet)
     else
+      Rails.logger.debug pet.errors.full_messages.join("\n")
       render 'new'
     end
   end
@@ -22,7 +23,7 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :kind, :age, :sex, :description)
+    params.require(:pet).permit(:name, :kind, :age, :sex, :description, :shelter_id, :photo_url)
   end
 
 
