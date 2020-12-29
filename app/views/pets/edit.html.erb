@@ -1,7 +1,9 @@
-Хотите забрать этого питомца? Мы свяжемся с вами по почте.
-<div class="custom-form">
-    <div class="custom-form-row">
-      <%= link_to 'Забрать', "/pets/#{@pet.id}", {:class=>"link-to-style1"}%>
-      <%= link_to 'Вернуться к просмотру животных', '/', {:class=>"link-to-style2"} %>
-    </div>
+<html>
+<body bgcolor="#edeef0">
+<div class="edit-pet">
+<%= 'Вы уверены, что хотите забрать этого питомца?' %>
 </div>
+<%= link_to 'Забрать', "/pets/#{@pet.id}", {:class=>"link-to-style1"}%>
+<%= link_to 'Вернуться к просмотру животных', '/', {:class=>"link-to-style2"} %>
+</body>
+</html>

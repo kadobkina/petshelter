@@ -4,7 +4,7 @@
     border: #2E2F30 solid 1px;
     border-radius: 10px;
     padding: 5px;
-    background: #D3D3D3;
+    background: #DCDCDC;
 }
 
 
@@ -15,12 +15,21 @@
 .our-pets {
     position: fixed;
     top: 5%;
-    left: 38%;
+    left: 50%;
+    margin-left: -150px;
     font-size: 35px;
     color: #343434;
     font-family: 'Ultra', sans-serif;
     text-transform: uppercase;
     text-shadow: 0 2px white, 0 3px #777;
+    background: #edeef0;
+}
+
+.edit-pet {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    font-size: 30px;
 }
 
 .pet-container {
@@ -29,28 +38,33 @@
     top: 18%;
     width: 100%;
     justify-content: space-around;
+    background: #edeef0;
 }
 
 .custom-form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
+    background: #edeef0;
 }
 
 .custom-form .custom-form-row {
     display: flex;
     justify-content: space-between;
+    background: #edeef0;
 }
 
 .custom-form-sign {
     display: flex;
     flex-direction: column;
     max-width: 600px;
+    background: #edeef0;
 }
 
 .custom-form-sign .custom-form-sign-row {
     display: flex;
     justify-content: space-between;
+    background: #edeef0;
 }
 
 .link-to-pet {
@@ -73,8 +87,8 @@
     color: black;
     display: inline-block;
     font-size: 17px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 .link-to-style:hover {
@@ -85,7 +99,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
     background-color: #4CAF50; /* Green */
     color: white;
 }
@@ -102,13 +116,13 @@
     color: black;
     display: inline-block;
     font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 .link-to-style1:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-    background-color: #4CAF50; /* Green */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -124,12 +138,12 @@
     color: black;
     display: inline-block;
     font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-    -webkit-transition-duration: 0.4s; /* Safari */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 .link-to-style2:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
-    background-color: #4CAF50; /* Green */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 7px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50;
     color: white;
 }
