@@ -12,8 +12,8 @@ sh2 = Shelter.create!(name: 'Приют №2', address: 'г. Ростов-на-�
 end
 
 unless Pet.any?
-p1 = Pet.create!(name: 'Тимоша', kind: 'Кошка', age: 5, sex: 'М', description: 'Рыжий котик', shelter: sh1)
-p2 = Pet.create!(name: 'Суджучок', kind: 'Грызун', age: 1, sex: 'М', description: 'Маленький джунгарик', shelter: sh2)
+p1 = Pet.create!(name: 'Тимоша', kind: 'Кошка', age: 5, sex: 'М', description: 'Рыжий котик')
+p2 = Pet.create!(name: 'Суджучок', kind: 'Грызун', age: 1, sex: 'М', description: 'Маленький джунгарик')
 end
 
 #Operation.create!(pet: p1, shelter: sh1, state: 'Прибыл')
