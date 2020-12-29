@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #root to: 'home#index'
   root to: 'home#index'
-  resources :pets, only: %i[new create show]
+  resources :pets, only: %i[new create show edit destroy]
+  get '/pets/:id/edit', to: 'pets#edit'
+  delete '/pets/:id', to: 'pets#destroy'
+
 end

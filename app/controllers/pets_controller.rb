@@ -9,6 +9,7 @@ class PetsController < ApplicationController
   def create
     pet = Pet.new pet_params
     if pet.save
+      Operation.new(pet,)
       redirect_to pet_path(pet)
     else
       Rails.logger.debug pet.errors.full_messages.join("\n")
@@ -19,6 +20,16 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find_by_id(params[:id])
     not_found unless @pet.present?
+  end
+
+  def edit
+    @pet = Pet.find_by_id(params[:id])
+    not_found unless @pet.present?
+  end
+
+  def destroy
+    @pet = Pet.find_by_id(params[:id])
+
   end
 
   private

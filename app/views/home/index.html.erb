@@ -1,10 +1,13 @@
+<div class = "our-pets">
+  <%= 'Наши животные' %>
+</div>
 <div class="pet-container">
   <% @pets.each do |p| %>
     <div class="description-pet">
       <p>
       <%= "<Тут будет фото>" %>
       </p>
-      <%= link_to p.name, pet_path(p) %>
+      <%= link_to p.name, pet_path(p), {:class=>"link-to-pet"} %>
       <div class ="description-pet-row">
         <p>
         <%= p.kind %>
@@ -18,5 +21,5 @@
   <% end %>
 </div>
 
-<%= link_to 'Отдать питомца', new_pet_path %>
+<%= link_to 'Отдать питомца', new_pet_path, {:class=>"link-to-style"} %>
 
